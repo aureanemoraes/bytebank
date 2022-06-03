@@ -1,4 +1,4 @@
-public class Gerente extends Funcionario {
+public class Gerente extends FuncionarioTeste {
 
     private int senha;
 
@@ -14,8 +14,9 @@ public class Gerente extends Funcionario {
         }
     }
     
+    @Override
     public double getBonificacao() {
-        return super.getBonificacao() + super.getSalario();
+        return super.getSalario() + 100;
     }
 
 }
