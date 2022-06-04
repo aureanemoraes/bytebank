@@ -1,22 +1,26 @@
-public class Gerente extends FuncionarioTeste {
+public class Gerente extends Funcionario implements Autenticavel {
 
     private int senha;
 
-    public void setSenha(int senha) {
+
+    public double getBonificacao(){
+        // implementação da bonificação do gerente omitida
+    	return 0.0;
+    }
+
+    @Override
+    public void setSenha(int senha){
         this.senha = senha;
     }
 
-    public boolean autentica(int senha) {
-        if (this.senha == senha) {
+    @Override
+    public boolean autentica(int senha){
+
+        if(this.senha == senha){
             return true;
         } else {
             return false;
         }
-    }
-    
-    @Override
-    public double getBonificacao() {
-        return super.getSalario() + 100;
     }
 
 }
