@@ -1,6 +1,10 @@
 public class Administrador extends Funcionario implements Autenticavel {
+	
+	private AutenticacaoUtil autenticador;
 
-    private int senha;
+	 public Administrador(){
+        this.autenticador = new AutenticacaoUtil();
+    }
 
     public double getBonificacao(){
         // implementação da bonificação do administrador omitida
@@ -9,17 +13,11 @@ public class Administrador extends Funcionario implements Autenticavel {
 
     @Override
     public void setSenha(int senha){
-        this.senha = senha;
+        this.autenticador.setSenha(senha);
     }
 
     @Override
     public boolean autentica(int senha){
-
-        if(this.senha == senha){
-            return true;
-        } else {
-            return false;
-        }
-    }
-
+        return this.autenticador.autentica(senha);
+    } 
 }
