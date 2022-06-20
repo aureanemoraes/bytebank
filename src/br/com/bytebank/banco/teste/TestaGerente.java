@@ -1,10 +1,12 @@
-package teste;
+package br.com.bytebank.banco.teste;
+
+import br.com.bytebank.banco.modelo.*;
 
 public class TestaGerente {
 
     public static void main(String[] args) {
     	// FQN - Full Qualified Name
-    	modelo.Gerente g1 = new modelo.Gerente();
+    	Gerente g1 = new Gerente();
         g1.setNome("Marco");
         g1.setCpf("235568413");
         g1.setSalario(5000.0);

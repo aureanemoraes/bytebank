@@ -1,15 +1,15 @@
-package modelo;
+package br.com.bytebank.banco.modelo;
 
-public class Administrador extends Funcionario implements Autenticavel {
-	
+public class Gerente extends Funcionario implements Autenticavel {
+
 	private AutenticacaoUtil autenticador;
 
-	 public Administrador(){
+    public Gerente(){
+
         this.autenticador = new AutenticacaoUtil();
     }
-
     public double getBonificacao(){
-        // implementação da bonificação do administrador omitida
+        // implementação da bonificação do gerente omitida
     	return 0.0;
     }
 
@@ -21,5 +21,6 @@ public class Administrador extends Funcionario implements Autenticavel {
     @Override
     public boolean autentica(int senha){
         return this.autenticador.autentica(senha);
-    } 
+    }
+
 }

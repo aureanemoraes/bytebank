@@ -1,13 +1,15 @@
-package teste;
+package br.com.bytebank.banco.teste;
+
+import br.com.bytebank.banco.modelo.*;
 
 public class TesteReferencias {
 
     public static void main(String[] args) {
-    	modelo.Gerente g1 = new modelo.Gerente();
+    	Gerente g1 = new Gerente();
         g1.setNome("Marcos");
         g1.setSalario(5000.0);
         
-        modelo.ControleBonificacao controle = new modelo.ControleBonificacao();
+        ControleBonificacao controle = new ControleBonificacao();
         controle.registra(g1);
 
         System.out.println(controle.getSoma());
