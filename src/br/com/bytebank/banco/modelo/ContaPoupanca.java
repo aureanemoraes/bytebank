@@ -6,6 +6,11 @@ public class ContaPoupanca extends Conta {
 	}
 	
 	@Override
+	public String toString() {
+		return "CONTA POUPANCA - " + super.toString();
+	}
+	
+	@Override
 	public void deposita(double valor){
 	    super.saldo += valor;
 	}
