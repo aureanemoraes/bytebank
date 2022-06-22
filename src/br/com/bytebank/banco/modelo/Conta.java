@@ -26,7 +26,6 @@ public abstract class Conta {
         this.agencia = agencia;
         this.numero = numero;
         this.saldo = 100; //isso significa que toda conta começa com 100 de saldo.
-        System.out.println("Estou criando uma conta");
     }
 
     public abstract void deposita(double valor);

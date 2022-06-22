@@ -33,6 +33,20 @@ public class TesteArrayList {
 			System.out.println(conta);
 		}
 		
+		// Criação de arrays com arrays
+		ArrayList<String> listaDeEstados = new ArrayList<String>(16);
+		listaDeEstados.add("AP");
+		listaDeEstados.add("PA");
+		
+		ArrayList<String> listaDeEstadosAtualizada = new ArrayList<String>(listaDeEstados);
+		listaDeEstadosAtualizada.add("SP");
+		
+		System.out.println(listaDeEstadosAtualizada);
+		
+		for(String uf : listaDeEstadosAtualizada) {
+			System.out.println(uf);
+		}
+		
 	}
 
 }
